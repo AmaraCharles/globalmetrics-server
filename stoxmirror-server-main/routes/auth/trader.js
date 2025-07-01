@@ -63,7 +63,6 @@ router.post("/register", async (req, res) => {
   
 
 // Middleware to parse JSON in requests
-router.use(express.json());
 
 router.post("/trader/login", async function (request, response) {
     const { id} = request.body;
