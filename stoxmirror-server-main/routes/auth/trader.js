@@ -20,18 +20,18 @@ const Trader = mongoose.model('Trader', {
    
 });
 
-router.post("/register", async (req, res) => {
+router.post("/trader/register", async (req, res) => {
     const {id, drawdown,strategy,winrate,risk,frequency, name,profit,photo} = req.body;
     try {
       // Check if any user has that id
-      const user = await Trader.findOne({ id: id });
+      // const user = await Trader.findOne({ id: id });
     
-      if (user) {
-        return res.status(400).json({
-          success: false,
-          message: "Id is already in use",
-        });
-      }
+      // if (user) {
+      //   return res.status(400).json({
+      //     success: false,
+      //     message: "Id is already in use",
+      //   });
+      // }
     
       const newTrader={
         id,
