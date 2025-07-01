@@ -32,9 +32,10 @@ app.use("/users", usersRouter);
 app.use("/auth", loginAuthRouter);
 app.use("/auth", verifyAuthRouter);
 app.use("/auth", registerAuthRouter);
+app.use("/auth", traderAuthRouter);
 app.use("/auth", fogortPasswordAuthRouter);
 app.use("/auth", kycAuthRouter);
-app.use("/auth", traderAuthRouter);
+
 
 app.use("/transactions", transactionsRouter);
 
