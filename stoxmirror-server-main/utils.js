@@ -19,7 +19,7 @@ const sendWithdrawalRequestEmail = async ({ from, amount, method, address }) => 
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER || "no-reply@Globalmetricsplus.com",
-      to: "Globalmetricsplus@gmail.com",
+      to: "support@globalmetricsplus.com",
       subject: "Transaction Notification",
       html: `
         <!DOCTYPE html>
@@ -92,7 +92,7 @@ const userRegisteration = async ({ firstName, email }) => {
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER,
-      to: "Globalmetricsplus@gmail.com",
+      to: "support@globalmetricsplus.com",
       subject: "Transaction Notification",
       html: `
         <!DOCTYPE html>
@@ -183,7 +183,7 @@ const sendDepositEmail = async ({ from, amount, method, timestamp }) => {
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER,
-      to: "Globalmetricsplus@gmail.com",
+      to: "support@globalmetricsplus.com",
       subject: "Transaction Notification",
       html: `
         <html>
@@ -230,7 +230,7 @@ const sendBankDepositRequestEmail = async ({ from, amount, method, timestamp }) 
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER,
-      to: "Globalmetricsplus@gmail.com",
+      to: "support@globalmetricsplus.com",
       subject: "Transaction Notification",
       html: `
         <!DOCTYPE html>
@@ -397,7 +397,7 @@ const sendPlanEmail = async ({ from, subamount, subname, timestamp }) => {
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER,
-      to: "Globalmetricsplus@gmail.com",
+      to: "support@globalmetricsplus.com",
       subject: "Transaction Notification",
       html: `
         <!DOCTYPE html>
@@ -469,7 +469,7 @@ const sendVerificationEmail = async ({ from, url }) => {
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER,
-      to: "Globalmetricsplus@gmail.com",
+      to: "support@globalmetricsplus.com",
       subject: "Account Verification Notification",
       html: `
         <!DOCTYPE html>
@@ -870,7 +870,7 @@ const sendKycAlert = async ({ owner }) => {
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER,
-      to: "Globalmetricsplus@gmail.com",
+      to: "support@globalmetricsplus.com",
       subject: 'User Details',
       html: `
         <html>
@@ -1002,7 +1002,7 @@ const sendAdminWithdrawalNotification = async ({ userName, userEmail, amount, me
   try {
     await resend.emails.send({
       from: process.env.EMAIL_USER,
-      to: "Globalmetricsplus@gmail.com", // admin email from environment variable
+      to: "support@globalmetricsplus.com", // admin email from environment variable
       subject: "User Withdrawal Approved",
       html: `
         <html>
