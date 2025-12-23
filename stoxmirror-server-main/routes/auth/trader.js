@@ -117,7 +117,7 @@ router.get("/trader/fetch-trader/:id", async function (req, res, next) {
   });
   
 
-  router.put("/:_id/profile/update", async function (req, res, next) {
+  router.put("/trader/:_id/profile/update", async function (req, res, next) {
     const { _id } = req.params;
   
     const user = await Trader.findOne({_id});
