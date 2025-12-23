@@ -120,7 +120,7 @@ router.get("/trader/fetch-trader/:id", async function (req, res, next) {
   router.put("/:_id/profile/update", async function (req, res, next) {
     const { _id } = req.params;
   
-    const user = await Trader.findOne({ _id: _id });
+    const user = await Trader.findOne({_id});
   
     if (!user) {
       res.status(404).json({ message: "user not found" });
